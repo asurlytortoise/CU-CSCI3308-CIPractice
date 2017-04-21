@@ -24,13 +24,24 @@ START_TEST(test_2d_area)
         coord_2d_t d;
         coord_2d_t e;
         coord_2d_t f;
+	coord_2d_t g;
+	coord_2d_t h;
+	coord_2d_t i;
         a.x=a.y=0;
         b.x=10;
         b.y=0;
         c.x=c.y=5;
-        d.x=d.y=e.x=e.y=f.x=f.y;
+        d.x=d.y=e.x=e.y=f.x=f.y=0;
+	g.x=0;
+	g.y=0;
+	h.x=2;
+	h.y=2;
+	i.x=-4;
+	i.y=-0;
+	
         ck_assert(coord_2d_area(&a,&b,&c)==25);
         ck_assert(coord_2d_area(&d,&e,&f)==0);
+	ck_assert(coord_2d_area(&g,&h,&i)==4);
 }
 END_TEST
 
