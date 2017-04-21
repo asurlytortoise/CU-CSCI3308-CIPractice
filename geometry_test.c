@@ -16,6 +16,24 @@
 #include "geometry.h"
 /*area test*/
 
+START_TEST(test_area)
+{
+        coord_2d_t a;
+        coord_2d_t b;
+        coord_2d_t c;
+        coord_2d_t d;
+        coord_2d_t e;
+        coord_2d_t f;
+        a.x=a.y=0;
+        b.x=10;
+        b.y=0;
+        c.x=c.y=5;
+        d.x=d.y=e.x=e.y=f.x=f.y;
+        ck_assert(coord_2d_area_triangle(a,b,c)==25);
+        ck_assert(coord_2d_area_triangle(d,e,f)==0);
+}
+
+
 /* coord_2d_eq Test */
 START_TEST(test_2d_eq)
 {
