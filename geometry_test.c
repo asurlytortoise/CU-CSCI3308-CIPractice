@@ -29,10 +29,10 @@ START_TEST(test_2d_area)
         b.y=0;
         c.x=c.y=5;
         d.x=d.y=e.x=e.y=f.x=f.y;
-        ck_assert(coord_2d_area_triangle(a,b,c)==25);
-        ck_assert(coord_2d_area_triangle(d,e,f)==0);
+        ck_assert(coord_2d_area(&a,&b,&c)==25);
+        ck_assert(coord_2d_area(&d,&e,&f)==0);
 }
-
+END_TEST
 
 /* coord_2d_eq Test */
 START_TEST(test_2d_eq)
