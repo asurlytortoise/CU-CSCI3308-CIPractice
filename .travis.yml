@@ -1,5 +1,6 @@
 language: c
 install: make get-dep
 compiler: gcc
-script: scons
+script: make && make test
+sudo: required 
 
